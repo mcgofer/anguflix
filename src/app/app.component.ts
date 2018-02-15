@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MoviesService } from './services/movies.service';
+import { CollectionService } from './services/collection.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Anguflix';
 }

@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  /* margin: auto; */
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.movie {
+  background-color: grey;
+  /* height: 300px; */
+}

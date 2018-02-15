@@ -1,0 +1,8 @@
+<div class="row collection-search">
+  <h3 class="my-collection col-sm-12">{{title}}</h3>
+  <!-- <input type="text" placeholder="Search by title"/>
+<input type="text" placeholder="Any year"/> -->
+  <div *ngFor="let movie of movies">
+    <app-movie [movie]="movie"></app-movie>
+  </div>
+</div>

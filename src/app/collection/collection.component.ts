@@ -18,4 +18,8 @@ export class CollectionComponent implements OnInit {
     this.movies = this.collectionService.getMovies();
   }
 
+  removeMovie(movie: Movie) {
+    this.collectionService.removeMovie(movie);
+  }
+
 }

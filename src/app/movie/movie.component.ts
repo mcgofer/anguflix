@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { MoviesService } from '../services/movies.service';
-import { CollectionService } from '../services/collection.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Movie } from './movie';
+// import { Output } from '@angular/core/src/metadata/directives';
+// import { EventEmitter } from 'selenium-webdriver';
 
 @Component({
   selector: 'app-movie',
@@ -10,13 +10,17 @@ import { Movie } from './movie';
 })
 export class MovieComponent implements OnInit {
   @Input() movie: Movie = new Movie();
-  constructor(private collectionService: CollectionService) { }
+  @Input() btnText: string;
+  @Output() movieButtonClick: EventEmitter<Movie> = new EventEmitter<Movie>();
+
+  constructor() { }
 
   ngOnInit() {
+    console.log(this.btnText);
   }
 
-  addMovie() {
-    this.collectionService.addMovie(this.movie);
+  clickFunc() {
+    this.movieButtonClick.emit(this.movie);
   }
 
 }

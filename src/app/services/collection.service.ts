@@ -25,4 +25,9 @@ export class CollectionService {
         this.myMovies.push(newMovie);
       }
     }
+
+    removeMovie(movie: Movie) {
+      let currInd = this.myMovies.findIndex(el => el.id === movie.id);
+      this.myMovies.splice(currInd, 1);
+    }
   }

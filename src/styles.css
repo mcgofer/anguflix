@@ -2,6 +2,20 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.css";
 
-.body {
-  background-color: black;
+* {
+  box-sizing: border-box;
+  margin: auto;
 }
+
+body {
+  background: url('https://wallpaperscraft.com/image/dark_spots_texture_background_50355_602x339.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: white;
+}
+
+

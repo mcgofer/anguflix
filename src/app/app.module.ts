@@ -8,6 +8,7 @@ import { CollectionComponent } from './collection/collection.component';
 import { MoviesService } from './services/movies.service';
 import { MovieComponent } from './movie/movie.component';
 import { CollectionService } from './services/collection.service';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { CollectionService } from './services/collection.service';
     AppComponent,
     MoviesComponent,
     CollectionComponent,
-    MovieComponent
+    MovieComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule

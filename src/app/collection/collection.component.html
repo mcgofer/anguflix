@@ -1,9 +1,9 @@
 <div class="row collection-search">
   <h3 class="my-collection col-sm-12">{{title}}</h3>
-  <!-- <input type="text" placeholder="Search by title"/>
-<input type="text" placeholder="Any year"/> -->
-  <div *ngFor="let movie of movies">
-    <app-movie [movie]="movie" (movieButtonClick)="removeMovie($event)" btnText="remove"></app-movie>
-  </div>
   <div *ngIf="movies.length == 0">Select movies from below to add to your collection</div>
+  <div class='row'>
+    <div *ngFor="let movie of movies" class="col-sm-4">
+      <app-movie [movie]="movie" (movieButtonClick)="removeMovie($event)" btnText="remove"></app-movie>
+    </div>
+  </div>
 </div>

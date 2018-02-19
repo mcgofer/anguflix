@@ -1,6 +1,7 @@
 <div class='row'>
 <h3 class='all-movies col-sm-12'>{{title}}</h3>
-<div *ngFor="let movie of movies" class="row">
+<div class='row'>
+<div *ngFor="let movie of movies" class="col-sm-4">
   <app-movie [movie]="movie" (movieButtonClick)="addMovie($event)" btnText="Add"></app-movie>
 </div>
 </div>

@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Movie } from './movie';
-// import { Output } from '@angular/core/src/metadata/directives';
-// import { EventEmitter } from 'selenium-webdriver';
+import { FilterPipe } from '../filter.pipe';
 
 @Component({
   selector: 'app-movie',

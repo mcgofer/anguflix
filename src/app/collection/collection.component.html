@@ -1,9 +1,19 @@
+<div class="user-info">
+    User: {{user.name}}
+    <br/>
+    Balance: {{user.budget}}
+  </div>
 <div class="row collection-search">
-  <h3 class="my-collection col-sm-12">{{title}}</h3>
+  <h3 class="my-collection col">{{title}}</h3>
+</div>
+
+  <div *ngIf="movies.length > 1" class="form-group row">
+    <input class="col-sm-3" type="text" [(ngModel)]="searchText" placeholder="Search by title"/>
+  </div>
   <div *ngIf="movies.length == 0">Select movies from below to add to your collection</div>
   <div class='row'>
-    <div *ngFor="let movie of movies" class="col-sm-4">
+    <div *ngFor="let movie of movies | filter : searchText" class="col-sm-4">
       <app-movie [movie]="movie" (movieButtonClick)="removeMovie($event)" btnText="remove"></app-movie>
     </div>
   </div>
-</div>
+<hr/>

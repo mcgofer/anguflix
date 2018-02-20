@@ -1,5 +1,7 @@
-<img src='{{movie.img}}' />
+<img src='{{movie.imgUrl}}' />
+<h5>{{movie.price}}</h5>
 <h4>{{movie.title}}, {{movie.year}}</h4>
-{{movie.descrShort}}
+{{movie.shortDescription}}
 <br/>
 <button class='add-remove btn btn-info' (click)='clickFunc()'>{{ btnText }}</button>
+<br/>
